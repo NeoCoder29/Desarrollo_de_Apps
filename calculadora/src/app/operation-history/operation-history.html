@@ -1,0 +1,19 @@
+<section class="historial">
+  <div class="encabezado">
+    <h2>Historial</h2>
+
+    @if (historial.length > 0) {
+      <button (click)="borrarHistorial()">Borrar historial</button>
+    }
+  </div>
+
+  @if (historial.length === 0) {
+    <p>Aún no has realizado operaciones.</p>
+  } @else {
+    <ol>
+      <li *ngFor="let operacion of historial">
+        {{ operacion }}
+      </li>
+    </ol>
+  }
+</section>

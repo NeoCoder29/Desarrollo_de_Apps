@@ -1,0 +1,58 @@
+<div class="calculadora">
+  <h1>Calculadora</h1>
+
+  <label for="numero1">Primer número</label>
+  <input
+    id="numero1"
+    type="number"
+    [(ngModel)]="numero1"
+    placeholder="Ejemplo: 10"
+  />
+
+  <label for="operacion">Operación</label>
+  <select id="operacion" [(ngModel)]="operacion">
+    <option value="+">Suma (+)</option>
+    <option value="-">Resta (-)</option>
+    <option value="*">Multiplicación (×)</option>
+    <option value="/">División (÷)</option>
+  </select>
+
+  <label for="numero2">Segundo número</label>
+  <input
+    id="numero2"
+    type="number"
+    [(ngModel)]="numero2"
+    placeholder="Ejemplo: 5"
+  />
+
+  <div class="botones">
+    <button (click)="calcular()">Calcular</button>
+    <button class="secundario" (click)="limpiar()">Limpiar</button>
+  </div>
+
+  @if (resultado !== null) {
+    <p class="resultado">Resultado: <strong>{{ resultado }}</strong></p>
+  }
+
+  <section class="historial">
+  <div class="encabezado-historial">
+    <h2>Historial</h2>
+
+    @if (historial.length > 0) {
+      <button class="boton-borrar" (click)="borrarHistorial()">
+        Borrar historial
+      </button>
+    }
+  </div>
+
+  @if (historial.length === 0) {
+    <p>Aún no has realizado operaciones.</p>
+  } @else {
+    <ol>
+      @for (operacion of historial; track $index) {
+        <li>{{ operacion }}</li>
+      }
+    </ol>
+  }
+</section>
+</div>
