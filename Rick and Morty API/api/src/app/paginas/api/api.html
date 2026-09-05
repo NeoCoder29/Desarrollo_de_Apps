@@ -1,0 +1,23 @@
+<h1>Rick and Morty API</h1>
+
+<ol>
+  <li *ngFor="let personaje of personajes">
+
+    <div
+      class="imagen-container"
+      [class.eliminado]="personaje.eliminado">
+
+      <img [src]="personaje.image" alt="">
+
+    </div>
+
+    <span class="nombre-personaje">
+      {{ personaje.name }}
+    </span>
+
+    <button (click)="eliminarPersonaje(personaje)">
+      Eliminar
+    </button>
+
+  </li>
+</ol>
