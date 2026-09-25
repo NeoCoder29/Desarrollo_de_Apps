@@ -1,0 +1,54 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Radio</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <h1>Radio</h1>
+
+  <p>
+    El componente Radio permite al usuario seleccionar una sola opción
+    entre varias alternativas disponibles.
+  </p>
+
+  <h2>Ejemplo</h2>
+
+  <p>
+    Selecciona tu tecnología favorita:
+  </p>
+
+  <ion-radio-group [(ngModel)]="opcionSeleccionada">
+
+    <ion-list>
+
+      <ion-item>
+        <ion-radio value="angular">
+          Angular
+        </ion-radio>
+      </ion-item>
+
+      <ion-item>
+        <ion-radio value="ionic">
+          Ionic
+        </ion-radio>
+      </ion-item>
+
+      <ion-item>
+        <ion-radio value="react">
+          React
+        </ion-radio>
+      </ion-item>
+
+    </ion-list>
+
+  </ion-radio-group>
+
+  <p>
+    Opción seleccionada: <strong>{{ opcionSeleccionada }}</strong>
+  </p>
+
+  <app-componentes-tab></app-componentes-tab>
+
+</ion-content>

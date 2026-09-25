@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Routing</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <h1>Routing</h1>
+
+  <p>
+    El Routing permite navegar entre diferentes páginas de una aplicación
+    utilizando rutas.
+  </p>
+
+  <h2>Ejemplo</h2>
+
+  <p>
+    Este botón utiliza RouterLink para navegar a otra página.
+  </p>
+
+  <ion-button [routerLink]="['/button']">
+    Ir a Button
+  </ion-button>
+
+  <br><br>
+
+  <ion-button [routerLink]="['/card']">
+    Ir a Card
+  </ion-button>
+
+  <app-componentes-tab></app-componentes-tab>
+
+</ion-content>

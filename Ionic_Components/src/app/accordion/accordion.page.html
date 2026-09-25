@@ -1,0 +1,56 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Accordion</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <h1>Accordion</h1>
+
+  <p>
+    El componente Accordion permite organizar información en diferentes
+    secciones que se pueden abrir y cerrar al hacer clic.
+  </p>
+
+  <h2>Ejemplo</h2>
+
+  <ion-accordion-group>
+
+    <ion-accordion value="ionic">
+      <ion-item slot="header">
+        <ion-label>¿Qué es Ionic?</ion-label>
+      </ion-item>
+
+      <div class="ion-padding" slot="content">
+        Ionic es un framework para desarrollar aplicaciones móviles
+        y aplicaciones web utilizando tecnologías como HTML, CSS y Angular.
+      </div>
+    </ion-accordion>
+
+    <ion-accordion value="angular">
+      <ion-item slot="header">
+        <ion-label>¿Qué es Angular?</ion-label>
+      </ion-item>
+
+      <div class="ion-padding" slot="content">
+        Angular es un framework basado en TypeScript que permite crear
+        aplicaciones web mediante componentes.
+      </div>
+    </ion-accordion>
+
+    <ion-accordion value="accordion">
+      <ion-item slot="header">
+        <ion-label>¿Para qué sirve Accordion?</ion-label>
+      </ion-item>
+
+      <div class="ion-padding" slot="content">
+        Permite mostrar información de forma organizada sin ocupar
+        demasiado espacio en la pantalla.
+      </div>
+    </ion-accordion>
+
+  </ion-accordion-group>
+</ion-content>
+
+<app-componentes-tab></app-componentes-tab>

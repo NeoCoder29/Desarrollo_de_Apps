@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Reorder</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <h1>Reorder</h1>
+
+  <p>
+    El componente Reorder permite cambiar el orden de los elementos
+    de una lista arrastrándolos.
+  </p>
+
+  <h2>Ejemplo</h2>
+
+  <p>
+    Mantén presionado el icono de la derecha y mueve los elementos.
+  </p>
+
+  <ion-reorder-group
+    [disabled]="false"
+    (ionItemReorder)="reordenar($event)">
+
+    @for (elemento of elementos; track elemento) {
+
+      <ion-item>
+
+        <ion-label>
+          {{ elemento }}
+        </ion-label>
+
+        <ion-reorder slot="end"></ion-reorder>
+
+      </ion-item>
+
+    }
+
+  </ion-reorder-group>
+
+  <app-componentes-tab></app-componentes-tab>
+
+</ion-content>

@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Refresher</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <h1>Refresher</h1>
+
+  <p>
+    El componente Refresher permite actualizar el contenido de una página
+    deslizando el dedo hacia abajo desde la parte superior.
+  </p>
+
+  <h2>Ejemplo</h2>
+
+  <p>
+    Desliza la lista hacia abajo para actualizarla.
+  </p>
+
+  <ion-refresher
+    slot="fixed"
+    (ionRefresh)="actualizar($event)">
+
+    <ion-refresher-content
+      pullingText="Desliza para actualizar"
+      refreshingSpinner="circles"
+      refreshingText="Actualizando...">
+    </ion-refresher-content>
+
+  </ion-refresher>
+
+  <ion-list>
+
+    @for (elemento of elementos; track elemento) {
+      <ion-item>
+        <ion-label>{{ elemento }}</ion-label>
+      </ion-item>
+    }
+
+  </ion-list>
+
+  <app-componentes-tab></app-componentes-tab>
+
+</ion-content>

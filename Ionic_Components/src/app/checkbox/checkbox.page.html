@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Checkbox</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <h1>Checkbox</h1>
+
+  <p>
+    El componente Checkbox permite al usuario seleccionar o deseleccionar
+    una opción.
+  </p>
+
+  <h2>Ejemplo</h2>
+
+  <ion-item>
+    <ion-checkbox [(ngModel)]="tareaCompletada">
+      Tarea completada
+    </ion-checkbox>
+  </ion-item>
+
+  <p>
+    Estado:
+    {{ tareaCompletada ? 'Completada' : 'Pendiente' }}
+  </p>
+
+  <app-componentes-tab></app-componentes-tab>
+
+</ion-content>

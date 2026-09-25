@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Toggle</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <h1>Toggle</h1>
+
+  <p>
+    El componente Toggle permite activar o desactivar una opción
+    mediante un interruptor.
+  </p>
+
+  <h2>Ejemplo</h2>
+
+  <ion-item>
+    <ion-label>
+      Notificaciones
+    </ion-label>
+
+    <ion-toggle [(ngModel)]="notificaciones"></ion-toggle>
+  </ion-item>
+
+  <p>
+    Estado:
+    <strong>
+      {{ notificaciones ? 'Activadas' : 'Desactivadas' }}
+    </strong>
+  </p>
+
+  <app-componentes-tab></app-componentes-tab>
+
+</ion-content>

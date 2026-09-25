@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar>
+
+    <ion-title>Toolbar</ion-title>
+
+    <ion-buttons slot="end">
+      <ion-button (click)="abrirConfiguracion()">
+        <ion-icon name="settings"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <h1>Toolbar</h1>
+
+  <p>
+    El componente Toolbar permite crear una barra de herramientas
+    para colocar títulos, botones, iconos y otras acciones.
+  </p>
+
+  <h2>Ejemplo</h2>
+
+  <p>
+    En la parte superior puedes observar una barra con un título
+    y un botón de configuración.
+  </p>
+
+  <ion-button expand="block" (click)="abrirConfiguracion()">
+    Abrir configuración
+  </ion-button>
+
+  <app-componentes-tab></app-componentes-tab>
+
+</ion-content>

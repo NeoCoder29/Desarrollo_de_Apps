@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Segment</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <h1>Segment</h1>
+
+  <p>
+    El componente Segment permite seleccionar una opción entre
+    diferentes categorías.
+  </p>
+
+  <h2>Ejemplo</h2>
+
+  <ion-segment [(ngModel)]="seleccion">
+
+    <ion-segment-button value="todos">
+      <ion-label>Todos</ion-label>
+    </ion-segment-button>
+
+    <ion-segment-button value="frontend">
+      <ion-label>Frontend</ion-label>
+    </ion-segment-button>
+
+    <ion-segment-button value="backend">
+      <ion-label>Backend</ion-label>
+    </ion-segment-button>
+
+  </ion-segment>
+
+  <p>
+    Seleccionado: <strong>{{ seleccion }}</strong>
+  </p>
+
+  <app-componentes-tab></app-componentes-tab>
+
+</ion-content>

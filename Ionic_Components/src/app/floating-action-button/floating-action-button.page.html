@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Floating Action Button</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <h1>Floating Action Button</h1>
+
+  <p>
+    El Floating Action Button permite colocar un botón flotante sobre
+    el contenido de la página para realizar una acción principal.
+  </p>
+
+  <h2>Ejemplo</h2>
+
+  <p>
+    Presiona el botón flotante para agregar un elemento.
+  </p>
+
+  <ion-fab slot="fixed" vertical="bottom" horizontal="end">
+    <ion-fab-button (click)="agregar()">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+  <app-componentes-tab></app-componentes-tab>
+
+</ion-content>

@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Inputs</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <h1>Inputs</h1>
+
+  <p>
+    El componente Input permite al usuario ingresar información mediante
+    campos de texto, como nombres, correos electrónicos, contraseñas o
+    cualquier otro dato.
+  </p>
+
+  <h2>Ejemplo</h2>
+
+  <ion-item>
+    <ion-label position="stacked">Nombre</ion-label>
+    <ion-input
+      [(ngModel)]="nombre"
+      placeholder="Escribe tu nombre">
+    </ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="stacked">Correo electrónico</ion-label>
+    <ion-input
+      type="email"
+      [(ngModel)]="correo"
+      placeholder="ejemplo@correo.com">
+    </ion-input>
+  </ion-item>
+
+  <h2>Datos ingresados</h2>
+
+  <p>Nombre: {{ nombre }}</p>
+  <p>Correo: {{ correo }}</p>
+
+  <app-componentes-tab></app-componentes-tab>
+
+</ion-content>

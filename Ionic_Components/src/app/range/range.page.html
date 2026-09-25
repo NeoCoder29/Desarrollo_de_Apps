@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Range</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <h1>Range</h1>
+
+  <p>
+    El componente Range permite seleccionar un valor dentro de un
+    intervalo utilizando una barra deslizante.
+  </p>
+
+  <h2>Ejemplo</h2>
+
+  <p>
+    Ajusta el nivel de volumen:
+  </p>
+
+  <ion-item>
+    <ion-label>Volumen</ion-label>
+    <ion-range
+      min="0"
+      max="100"
+      [(ngModel)]="volumen">
+    </ion-range>
+  </ion-item>
+
+  <p>
+    Volumen seleccionado: <strong>{{ volumen }}</strong>%
+  </p>
+
+  <app-componentes-tab></app-componentes-tab>
+
+</ion-content>

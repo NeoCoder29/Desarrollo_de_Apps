@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Infinite Scroll</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <h1>Infinite Scroll</h1>
+
+  <p>
+    El componente Infinite Scroll permite cargar más contenido
+    automáticamente cuando el usuario llega al final de una lista.
+  </p>
+
+  <h2>Ejemplo</h2>
+
+  <p>
+    Desplázate hacia abajo para cargar más elementos.
+  </p>
+
+  @for (elemento of elementos; track elemento) {
+    <ion-item>
+      <ion-label>{{ elemento }}</ion-label>
+    </ion-item>
+  }
+
+  <ion-infinite-scroll (ionInfinite)="cargarMas($event)">
+    <ion-infinite-scroll-content
+      loadingText="Cargando más elementos...">
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+
+  <app-componentes-tab></app-componentes-tab>
+
+</ion-content>
