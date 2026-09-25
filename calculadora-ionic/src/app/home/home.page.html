@@ -1,0 +1,167 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Calculadora</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <div class="calculadora">
+
+    <h1>Calculadora</h1>
+
+    <ion-list>
+
+      <!-- Primer número -->
+      <ion-item>
+        <ion-input
+          label="Primer número"
+          label-placement="stacked"
+          type="number"
+          placeholder="Ejemplo: 10"
+          [(ngModel)]="numero1">
+        </ion-input>
+      </ion-item>
+
+      <!-- Operación -->
+      <ion-item>
+        <ion-select
+          label="Operación"
+          label-placement="stacked"
+          interface="action-sheet"
+          [(ngModel)]="operacion">
+
+          <ion-select-option value="+">
+            Suma (+)
+          </ion-select-option>
+
+          <ion-select-option value="-">
+            Resta (-)
+          </ion-select-option>
+
+          <ion-select-option value="*">
+            Multiplicación (×)
+          </ion-select-option>
+
+          <ion-select-option value="/">
+            División (÷)
+          </ion-select-option>
+
+        </ion-select>
+      </ion-item>
+
+      <!-- Segundo número -->
+      <ion-item>
+        <ion-input
+          label="Segundo número"
+          label-placement="stacked"
+          type="number"
+          placeholder="Ejemplo: 5"
+          [(ngModel)]="numero2">
+        </ion-input>
+      </ion-item>
+
+    </ion-list>
+
+
+    <!-- Botones -->
+    <div class="botones">
+
+      <ion-button
+        expand="block"
+        (click)="calcular()">
+        Calcular
+      </ion-button>
+
+      <ion-button
+        expand="block"
+        fill="outline"
+        color="medium"
+        (click)="limpiar()">
+        Limpiar
+      </ion-button>
+
+    </div>
+
+
+    <!-- Resultado -->
+    @if (resultado !== null) {
+
+      <ion-card class="resultado">
+
+        <ion-card-content>
+          <div>
+            Resultado:
+          </div>
+
+          <strong>
+            {{ resultado }}
+          </strong>
+        </ion-card-content>
+
+      </ion-card>
+
+    }
+
+
+    <!-- Historial -->
+    <ion-card class="historial">
+
+      <ion-card-header>
+
+        <div class="encabezado-historial">
+
+          <ion-card-title>
+            Historial
+          </ion-card-title>
+
+          @if (historial.length > 0) {
+
+            <ion-button
+              color="danger"
+              fill="clear"
+              size="small"
+              (click)="borrarHistorial()">
+
+              Borrar
+
+            </ion-button>
+
+          }
+
+        </div>
+
+      </ion-card-header>
+
+
+      <ion-card-content>
+
+        @if (historial.length === 0) {
+
+          <p class="sin-historial">
+            Aún no has realizado operaciones.
+          </p>
+
+        } @else {
+
+          <ol>
+
+            @for (operacion of historial; track $index) {
+
+              <li>
+                {{ operacion }}
+              </li>
+
+            }
+
+          </ol>
+
+        }
+
+      </ion-card-content>
+
+    </ion-card>
+
+  </div>
+
+</ion-content>

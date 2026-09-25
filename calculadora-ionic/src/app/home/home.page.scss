@@ -1,0 +1,183 @@
+ion-content {
+  --background: #000000;
+  --color: #ffffff;
+}
+
+/* Contenedor principal */
+.calculadora {
+  width: 100%;
+  max-width: 450px;
+  margin: 0 auto;
+  padding: 25px 18px 40px;
+  box-sizing: border-box;
+}
+
+/* Título */
+h1 {
+  margin: 10px 0 30px;
+  text-align: center;
+  color: #ffffff;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+/* Lista */
+ion-list {
+  background: transparent;
+  padding: 0;
+}
+
+/* Campos */
+ion-item {
+  --background: #1a1a1a;
+  --color: #ffffff;
+  --border-color: #333333;
+  --highlight-color-focused: #ffffff;
+
+  margin-bottom: 16px;
+  border: 1px solid #333333;
+  border-radius: 10px;
+
+  box-shadow: none;
+}
+
+/* Texto de los labels */
+ion-input,
+ion-select {
+  --color: #ffffff;
+  --placeholder-color: #888888;
+  --placeholder-opacity: 1;
+
+  color: #ffffff;
+}
+
+/* Label de Ionic */
+ion-input::part(label),
+ion-select::part(label) {
+  color: #ffffff;
+}
+
+/* Texto escrito dentro del input */
+ion-input::part(native) {
+  color: #ffffff;
+  font-size: 18px;
+}
+
+/* Selector */
+ion-select {
+  color: #ffffff;
+}
+
+/* Botones */
+.botones {
+  display: flex;
+  gap: 12px;
+  margin-top: 25px;
+}
+
+.botones ion-button {
+  flex: 1;
+  margin: 0;
+
+  --border-radius: 10px;
+  --color: #ffffff;
+
+  height: 48px;
+
+  font-weight: 600;
+}
+
+/* Resultado */
+.resultado {
+  margin: 25px 0 0;
+
+  --background: #111111;
+
+  border: 1px solid #444444;
+  border-radius: 12px;
+
+  box-shadow: none;
+
+  text-align: center;
+}
+
+.resultado ion-card-content {
+  padding: 20px;
+
+  color: #ffffff;
+
+  font-size: 18px;
+}
+
+.resultado strong {
+  display: block;
+
+  margin-top: 8px;
+
+  color: #ffffff;
+
+  font-size: 28px;
+  font-weight: 700;
+}
+
+/* Historial */
+.historial {
+  margin: 30px 0 0;
+
+  --background: #111111;
+
+  border: 1px solid #333333;
+  border-radius: 12px;
+
+  box-shadow: none;
+}
+
+/* Encabezado del historial */
+.historial ion-card-header {
+  padding-bottom: 8px;
+}
+
+.encabezado-historial {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.encabezado-historial ion-card-title {
+  color: #ffffff;
+
+  font-size: 21px;
+  font-weight: 700;
+}
+
+.encabezado-historial ion-button {
+  margin: 0;
+}
+
+/* Contenido del historial */
+.historial ion-card-content {
+  color: #ffffff;
+}
+
+.historial ol {
+  margin: 0;
+  padding-left: 25px;
+}
+
+.historial li {
+  margin: 12px 0;
+
+  color: #ffffff;
+
+  font-size: 16px;
+}
+
+/* Mensaje cuando no hay operaciones */
+.sin-historial {
+  margin: 0;
+
+  color: #aaaaaa;
+
+  text-align: center;
+}
